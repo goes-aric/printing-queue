@@ -2,7 +2,6 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import VueMultiselect from 'vue-multiselect'
 import VueSweetalert2 from 'vue-sweetalert2'
 import Toast from "vue-toastification"
 import { defineRule, configure } from 'vee-validate'
@@ -15,7 +14,6 @@ import print from 'vue3-print-nb'
 import Number from '@coders-tm/vue-number-format'
 import './assets/css/app.css'
 import './assets/css/custom.css'
-import 'vue-multiselect/dist/vue-multiselect.css'
 import 'sweetalert2/dist/sweetalert2.min.css'
 import "vue-toastification/dist/index.css"
 import 'v-calendar/dist/style.css'
@@ -47,7 +45,6 @@ const options = {
 }
 
 const app = createApp(App)
-app.component('VueMultiselect', VueMultiselect)
 app.use(store)
 app.use(router)
 app.use(VueSweetalert2)
