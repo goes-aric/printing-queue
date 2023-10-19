@@ -8,7 +8,6 @@ import { defineRule, configure } from 'vee-validate'
 import AllRules from '@vee-validate/rules'
 import { localize } from '@vee-validate/i18n'
 import id from '@vee-validate/i18n/dist/locale/id.json'
-import VCalendar from 'v-calendar'
 import VueProgressBar from "@aacassandra/vue3-progressbar"
 import print from 'vue3-print-nb'
 import Number from '@coders-tm/vue-number-format'
@@ -16,7 +15,6 @@ import './assets/css/app.css'
 import './assets/css/custom.css'
 import 'sweetalert2/dist/sweetalert2.min.css'
 import "vue-toastification/dist/index.css"
-import 'v-calendar/dist/style.css'
 
 // Make the validat aggressive to show case validators
 configure({
@@ -49,7 +47,6 @@ app.use(store)
 app.use(router)
 app.use(VueSweetalert2)
 app.use(Toast)
-app.use(VCalendar, {})
 app.use(VueProgressBar, options)
 app.use(print)
 app.use(Number, { precision: 4 })
