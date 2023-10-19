@@ -8,7 +8,6 @@ import { defineRule, configure } from 'vee-validate'
 import AllRules from '@vee-validate/rules'
 import { localize } from '@vee-validate/i18n'
 import id from '@vee-validate/i18n/dist/locale/id.json'
-import VueProgressBar from "@aacassandra/vue3-progressbar"
 import print from 'vue3-print-nb'
 import Number from '@coders-tm/vue-number-format'
 import './assets/css/app.css'
@@ -27,27 +26,11 @@ Object.keys(AllRules).forEach(rule => {
   defineRule(rule, AllRules[rule]);
 })
 
-/* Vue Progress Bar Options */
-const options = {
-  color: 'rgb(124, 58, 237)',
-  failedColor: 'rgb(219, 39, 119)',
-  thickness: '5px',
-  transition: {
-    speed: '0.5s',
-    opacity: '0.6s',
-    termination: 300
-  },
-  autoRevert: true,
-  location: 'top',
-  inverse: false
-}
-
 const app = createApp(App)
 app.use(store)
 app.use(router)
 app.use(VueSweetalert2)
 app.use(Toast)
-app.use(VueProgressBar, options)
 app.use(print)
 app.use(Number, { precision: 4 })
 
