@@ -24,5 +24,8 @@ export default {
   },
   nextQueue(){
     return axios.post(`/queues/next-queue`)
-  }  
+  },
+  fetchLatestQueue(){
+    return axios.get(`/queues/latest`)
+  },  
 }
